@@ -12,6 +12,7 @@ pacman -Syu --needed \
 	firefox \
 	git \
 	go \
+	python-virtualenv \
 	rofi \
 	stow \
 	sudo \
