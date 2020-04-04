@@ -12,4 +12,4 @@ There are loads of dependencies for this project, but the only one needed to act
 
 ## Full install
 
-For a full install, run: `stow rofi sway vim zsh`
+For a full install, run: `stow -t "${HOME}" rofi sway vim zsh`
