@@ -11,9 +11,13 @@ pacman -Syu --needed \
 	base-devel \
 	firefox \
 	git \
+	go \
 	rofi \
 	stow \
+	sudo \
 	sway \
+	ttf-font-awesome \
+	ttf-inconsolata \
 	vim \
 	xorg-server-xwayland \
 	zsh
