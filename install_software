@@ -1,0 +1,19 @@
+#!/usr/bin/env sh
+
+user=$(whoami)
+
+if [ "${user}" != "root" ]; then
+	printf "Please run this program as root!\n"
+	exit 1
+fi
+
+pacman -Syu --needed \
+	base-devel \
+	firefox \
+	git \
+	rofi \
+	stow \
+	sway \
+	vim \
+	xorg-server-xwayland \
+	zsh
