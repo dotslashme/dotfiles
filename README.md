@@ -2,11 +2,11 @@
 
 ## Install environment (Arch linux)
 
-```
+```sh
 # sh < <(curl -s https://raw.githubusercontent.com/dotslashme/dotfiles/master/install_software)
 ```
 OR
-```
+```sh
 # wget -O - https://raw.githubusercontent.com/dotslashme/dotfiles/master/install_software | sh
 ```
 
@@ -16,4 +16,14 @@ There are loads of dependencies for this project, but the only one needed to act
 
 ## Full install
 
-For a full install, run: `stow -t "${HOME}" rofi sway vim zsh`
+To setup your home folder, run:
+
+```sh
+stow -t "${HOME}" rofi sway vim zsh
+```
+
+To setup the root folder, run:
+
+```sh
+sudo stow -t / keyboard
+```
