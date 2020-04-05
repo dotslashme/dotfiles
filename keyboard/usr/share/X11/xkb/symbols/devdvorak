@@ -1,0 +1,18 @@
+// This file contain corrections for using the Ergodox keyboard with my own layout
+// See https://dotslashme.com/project/ergodox/
+
+partial default alphanumeric_keys
+xkb_symbols "basic" {
+    include "us(basic)"
+    include "devdvorak(corrections)"
+};
+
+partial alphanumeric_keys
+xkb_symbols "corrections" {
+  key <AD11> { [ bracketleft, braceleft ] };
+  key <AD12> { [ bracketright, braceright ] };
+  key <TLDE> { [ grave, asciitilde ] };
+  key <AB11> { [ aring, Aring ] };
+  key <JPCM> { [ adiaeresis, Adiaeresis ] };
+  key <I129> { [ odiaeresis, Odiaeresis ] };
+};
