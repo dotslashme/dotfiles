@@ -12,6 +12,7 @@ pacman -Syu --needed \
 	firefox \
 	git \
 	go \
+	jdk11-openjdk \
 	python-virtualenv \
 	rofi \
 	stow \
