@@ -13,6 +13,7 @@ pacman -Syu --needed \
 	git \
 	go \
 	jdk11-openjdk \
+	python-pip \
 	python-virtualenv \
 	rofi \
 	stow \
