@@ -7,20 +7,24 @@ if [ "${user}" != "root" ]; then
 	exit 1
 fi
 
-pacman -Syu --needed \
+pacman -Syu --needed --noconfirm \
 	base-devel \
 	bbswitch \
 	bumblebee \
-	firefox \
+	docker \
+	docker-compose \
 	git \
 	go \
 	jdk11-openjdk \
+	maven \
 	python-pip \
 	python-virtualenv \
 	rofi \
 	stow \
 	sudo \
 	sway \
+	sway-idle \
+	sway-lock \
 	task \
 	ttf-font-awesome \
 	ttf-inconsolata \
