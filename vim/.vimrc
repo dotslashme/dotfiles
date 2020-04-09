@@ -1,8 +1,5 @@
-## Defaults
 set number
 
-
-## Install vim-plug if it does not exist
 
 if empty(glob('~/.vim/autoload/plug.vim'))
   silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
@@ -10,8 +7,6 @@ if empty(glob('~/.vim/autoload/plug.vim'))
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
-
-## Plugins
 
 call plug#begin('~/.vim/bundle')
 Plug 'tpope/vim-sensible'
