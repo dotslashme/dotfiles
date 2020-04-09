@@ -21,6 +21,7 @@ pacman -Syu --needed \
 	stow \
 	sudo \
 	sway \
+	task \
 	ttf-font-awesome \
 	ttf-inconsolata \
 	vim \
