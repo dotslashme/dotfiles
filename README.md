@@ -19,7 +19,7 @@ There are loads of dependencies for this project, but the only one needed to act
 To setup your home folder, run:
 
 ```sh
-stow -t "${HOME}" rofi sway vim zsh
+stow -t "${HOME}" antibody rofi sway termite vim zsh
 ```
 
 To setup the root folder, run:
