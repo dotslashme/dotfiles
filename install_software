@@ -9,6 +9,8 @@ fi
 
 pacman -Syu --needed \
 	base-devel \
+	bbswitch \
+	bumblebee \
 	firefox \
 	git \
 	go \
