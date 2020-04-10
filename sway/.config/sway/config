@@ -167,7 +167,7 @@ bindsym $mod+i mode "$system"
 set $system System (c) reload config, (l) lock, (e) exit, (r) reboot, (s) shutdown
 mode "$system" {
   bindsym l exec --no-startup-id swaylock-fancy, mode "default"
-  bindsym e swaymsg exit, mode "default"
+  bindsym e exit, mode "default"
   bindsym r exec --no-startup-id systemctl reboot, mode "default"
   bindsym s exec --no-startup-id systemctl poweroff, mode "default"
   bindsym c reload, mode "default"
