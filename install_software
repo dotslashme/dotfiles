@@ -23,8 +23,8 @@ pacman -Syu --needed --noconfirm \
 	stow \
 	sudo \
 	sway \
-	sway-idle \
-	sway-lock \
+	swayidle \
+	swaylock \
 	task \
 	ttf-font-awesome \
 	ttf-inconsolata \
