@@ -18,6 +18,7 @@ pacman -Syu --needed --noconfirm \
 	grim \
 	jdk11-openjdk \
 	maven \
+	openssh \
 	python-pip \
 	python-virtualenv \
 	rofi \
