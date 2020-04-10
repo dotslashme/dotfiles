@@ -15,11 +15,13 @@ pacman -Syu --needed --noconfirm \
 	docker-compose \
 	git \
 	go \
+	grim \
 	jdk11-openjdk \
 	maven \
 	python-pip \
 	python-virtualenv \
 	rofi \
+	slurp \
 	stow \
 	sudo \
 	sway \
