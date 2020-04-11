@@ -16,6 +16,9 @@ setopt HIST_IGNORE_DUPS
 setopt HIST_REDUCE_BLANKS
 setopt HIST_IGNORE_SPACE
 
+bindkey -v
+bindkey "^R" history-incremental-pattern-search-backward
+
 ## Completion
 setopt ALWAYS_TO_END
 setopt AUTO_MENU
