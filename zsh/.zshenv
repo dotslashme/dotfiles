@@ -8,6 +8,7 @@ alias -g ls='ls -lah --group-directories-first --color=always'
 alias lss='ls -rt'
 alias mvp='maven -T C1'
 alias ssh='TERM=xterm ssh'
+alias bat='bat --theme TwoDark --style header,grid'
 
 ## Git alias
 alias ga='git add'
@@ -40,6 +41,8 @@ alias gsu='git submodule update'
 ## Environment
 export EDITOR="vim"
 export TERM="xterm-256color"
+export GOPATH="/home/cvelin/go"
+export _JAVA_AWT_WM_NONREPARENTING=1
 
 ## ssh-agent
 if ! pgrep -u "$USER" ssh-agent > /dev/null; then
