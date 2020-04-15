@@ -10,6 +10,18 @@ include base16-onedark.config
 output eDP-1 scale 2
 output * bg $wallpaper fill
 
+
+
+input type:keyboard {
+    xkb_layout se_sv_dvorak
+}
+
+cinput 65261:4871:ErgoDox_EZ_ErgoDox_EZ {
+    xkb_layout devdvorak
+}
+
+
+
 # Basic color configuration using the Base16 variables for windows and borders.
 # Property Name         Border  BG      Text    Indicator Child Border
 client.focused          $base05 $base0D $base00 $base0D $base0D
@@ -30,7 +42,7 @@ set $ws5  "5:  "
 set $ws6  "6:  "
 set $ws7  "7:  "
 set $ws8  "8:  "
-set $ws9  "9:  "
+set $ws9  "9:  "
 set $ws0 "10:  "
 
 gaps inner $default_gaps_inner
@@ -51,6 +63,7 @@ assign [class="Gnome-terminal"]                  $ws4
 assign [class="DBeaver"]                         $ws5
 assign [class="Chromium|Brave-browser|Firefox"]  $ws7
 assign [class="slack|Slack"]                     $ws8
+assign [app_id="deluge"]                         $ws9
 
 
 for_window [window_role="pop-up"]          floating enable
@@ -194,12 +207,13 @@ bar {
 	    urgent_workspace    $base08 $base08 $base00
 	    binding_mode        $base00 $base0A $base00
 	}
-	status_command /usr/bin/bumblebee-status \
+	status_command /home/cvelin/code/bumblebee-status/bumblebee-status \
+        -d \
 		--markup pango \
 		-m \
-			taskwarrior \
+            taskwarrior2 \
+			vpn \
 			github \
-			docker_ps \
 			pasink \
 			datetime \
 			battery \
@@ -211,7 +225,7 @@ bar {
 }
 
 exec swayidle -w \
-	timeout 300 'swaylock-fancy' \
-	timeout 600 'swaymsg "output * dpms off"' \
-	resume 'swaymsg "output * dpms on"' \
-	before-sleep 'swaylock-fancy'
+  timeout 300 'swaylock-fancy' \
+  timeout 600 'swaymsg "output * dpms off"' \
+  resume 'swaymsg "output * dpms on"' \
+  before-sleep 'swaylock-fancy'
