@@ -16,7 +16,7 @@ input type:keyboard {
     xkb_layout se_sv_dvorak
 }
 
-cinput 65261:4871:ErgoDox_EZ_ErgoDox_EZ {
+input 65261:4871:ErgoDox_EZ_ErgoDox_EZ {
     xkb_layout devdvorak
 }
 
