@@ -16,7 +16,9 @@ pacman -Syu --needed --noconfirm \
 	git \
 	go \
 	grim \
+	hub \
 	jdk11-openjdk \
+	mako \
 	maven \
 	openssh \
 	python-pip \

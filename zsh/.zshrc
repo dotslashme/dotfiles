@@ -24,6 +24,7 @@ setopt ALWAYS_TO_END
 setopt AUTO_MENU
 setopt COMPLETE_IN_WORD
 
+fpath=(~/.zsh/completions $fpath)
 autoload -Uz compinit && compinit
 
 # Fallback to built in ls colors

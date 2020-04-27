@@ -2,7 +2,10 @@
 source <(antibody init)
 antibody bundle < ~/.antibody-plugins
 
-# Alias
+## Hub alias
+eval "$(hub alias -s)"
+
+## Alias
 alias -g ls='ls -lah --group-directories-first --color=always'
 
 alias lss='ls -rt'
