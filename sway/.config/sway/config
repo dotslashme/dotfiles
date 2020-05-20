@@ -43,7 +43,7 @@ set $ws6  "6:  "
 set $ws7  "7:  "
 set $ws8  "8:  "
 set $ws9  "9:  "
-set $ws0 "10:  "
+set $ws0 "10: "
 
 gaps inner $default_gaps_inner
 gaps outer $default_gaps_outer
@@ -63,7 +63,7 @@ assign [class="Gnome-terminal"]                  $ws4
 assign [class="DBeaver"]                         $ws5
 assign [class="Chromium|Brave-browser|Firefox"]  $ws7
 assign [class="slack|Slack"]                     $ws8
-assign [app_id="deluge"]                         $ws9
+assign [app_id="deluge|Tixati"]                  $ws9
 
 
 for_window [window_role="pop-up"]          floating enable
