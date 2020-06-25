@@ -6,7 +6,7 @@ antibody bundle < ~/.antibody-plugins
 eval "$(hub alias -s)"
 
 ## Alias
-alias -g ls='ls -lah --group-directories-first --color=always'
+alias ls='ls -lah --group-directories-first --color=always'
 
 alias lss='ls -rt'
 alias mvp='maven -T C1'
