@@ -1,4 +1,3 @@
-! Set the desired separator style
-rofi.separator-style: solid
-
-rofi.theme: onedark.rasi
+    rofi.show-icons: true
+    rofi.separator-style: solid
+    rofi.theme: onedark.rasi
