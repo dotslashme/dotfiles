@@ -21,6 +21,8 @@ pacman -Syu --needed --noconfirm \
 	mako \
 	maven \
 	openssh \
+	pavucontrol \
+	pulseaudio \
 	python-pip \
 	python-virtualenv \
 	rofi \
@@ -31,8 +33,13 @@ pacman -Syu --needed --noconfirm \
 	swayidle \
 	swaylock \
 	task \
+	termite \
 	ttf-font-awesome \
 	ttf-inconsolata \
 	vim \
 	xorg-server-xwayland \
 	zsh
+
+curl -sfL git.io/antibody | sh -s - -b /usr/local/bin
+
+pip install taskw
