@@ -1,0 +1,51 @@
+* {
+    border: none;
+    border-radius: 0;
+    min-height: 0;
+}
+
+window#waybar {
+    color: #abb2bf;
+    background: rgba(40,44,52,0.8);
+}
+
+#workspaces button {
+    font-size: 18px;
+    padding: 0 8px;
+    color: #abb2bf;
+    border-bottom: 2px solid transparent;
+}
+
+#workspaces button.focused {
+    color: #e5c07b;
+    border-bottom: 2px solid #e5c07b;
+}
+
+#clock, #battery, #pulseaudio, #tray, #mode {
+    font-size: 13px;
+    padding: 0 3px;
+    margin: 0 2px;
+}
+
+#battery icon {
+    color: #e06c75;
+}
+
+@keyframes blink {
+    to {
+        background-color: #abb2bf;
+        color: #282c34;
+    }
+}
+
+#battery.warning:not(.charging) {
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#network.disconnected {
+    background: #e06c75;
+}
