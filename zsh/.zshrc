@@ -1,3 +1,10 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 ## Basics
 setopt NO_BEEP
 setopt PUSHD_IGNORE_DUPS
@@ -35,3 +42,6 @@ zstyle ':completion:*' list-prompt '%SAt %p: Hit TAB for more, or the character 
 
 ## Make the selection prompt friendly when there are a lot of choices
 zstyle ':completion:*' select-prompt '%SScrolling active: current selection at %p%s'
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
