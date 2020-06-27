@@ -37,6 +37,7 @@ pacman -Syu --needed --noconfirm \
 	ttf-font-awesome \
 	ttf-inconsolata \
 	vim \
+	waybar \
 	xorg-server-xwayland \
 	zsh
 
