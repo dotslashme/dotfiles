@@ -10,8 +10,8 @@ fi
 pacman -Syu --needed --noconfirm \
 	base-devel \
 	bbswitch \
+	blueman \
 	bluez \
-	bluez-utils \
 	bumblebee \
 	docker \
 	docker-compose \
@@ -25,6 +25,7 @@ pacman -Syu --needed --noconfirm \
 	openssh \
 	pavucontrol \
 	pulseaudio \
+	pulseaudio-bluetooth \
 	python-pip \
 	python-virtualenv \
 	rofi \
