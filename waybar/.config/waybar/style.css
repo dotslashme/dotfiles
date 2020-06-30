@@ -21,6 +21,11 @@ window#waybar {
     border-bottom: 2px solid #e5c07b;
 }
 
+#workspaces button.urgent {
+    color: #e06c75;
+    border-bottom: 2px solid #e06c75;
+}
+
 #clock, #battery, #pulseaudio, #tray, #mode {
     font-size: 13px;
     padding: 0 3px;
