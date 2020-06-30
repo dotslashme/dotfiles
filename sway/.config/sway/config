@@ -45,14 +45,16 @@ floating_minimum_size -1 x -1
 floating_maximum_size -1 x -1
 
 # assign apps to workspaces
-assign [class="jetbrains-idea-ce"]               $ws0
-assign [app_id="sublime_text|code-oss"]          $ws1
-assign [app_id="termite"]                        $ws2
-assign [class="Gnome-terminal"]                  $ws3
-assign [class="DBeaver"]                         $ws4
-assign [class="Chromium|Brave-browser|Firefox"]  $ws6
-assign [class="slack|Slack"]                     $ws7
-assign [app_id="deluge|Tixati"]                  $ws8
+assign [class="jetbrains-idea-ce|jetbrains-idea"] 0
+assign [app_id="subl3|code-oss"]                  1
+assign [class="Vmware"]                           2
+assign [class="DBeaver"]                          3
+assign [class="Clementine"]                       4
+assign [app_id="termite"]                         5
+assign [class="Chromium|Brave-browser|Firefox"]   6
+assign [class="slack|Slack"]                      7
+assign [class="Tixati"]                           8
+assign [class="Lens"]                             9
 
 
 for_window [window_role="pop-up"]          floating enable
@@ -63,6 +65,7 @@ for_window [window_type="dialog"]          floating enable
 for_window [window_type="menu"]            floating enable
 for_window [class="galculator|Galculator"] floating enable
 for_window [class="java-lang-Thread"]      floating enable
+for_window [app_id="guake"]                floating enable
 
 for_window [class="^.*"] border pixel 1
 
@@ -143,6 +146,8 @@ bindsym $mod+shift+0 move container to workspace 9
 
 bindsym $mod+ctrl+h move workspace to output left
 bindsym $mod+ctrl+s move workspace to output right
+
+bindsym $mod+ctrl+t exec guake-toggle
 
 bindsym XF86MonBrightnessDown exec brightnessctl -d intel_backlight set 5%-
 bindsym XF86MonBrightnessUp exec brightnessctl -d intel_backlight set +5%

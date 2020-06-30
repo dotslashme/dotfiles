@@ -2,7 +2,7 @@
     "layer": "top",
     "position": "top",
     "height": 30,
-    "modules-left": ["sway/window"],
+    "modules-left": ["sway/mode","sway/window"],
     "modules-center": ["sway/workspaces"],
     "modules-right": ["pulseaudio", "battery", "tray", "clock"],
     "sway/workspaces": {
@@ -24,8 +24,8 @@
         "format-icons": {
             "0": "",
             "1": "",
-            "2": "",
-            "3": "",
+            "2": "",
+            "3": "",
             "4": "",
             "5": "",
             "6": "",
