@@ -45,7 +45,6 @@ alias gsu='git submodule update'
 export EDITOR="vim"
 export TERM="xterm-256color"
 export GOPATH="/home/cvelin/go"
-export _JAVA_AWT_WM_NONREPARENTING=1
 
 ## ssh-agent
 if ! pgrep -u "$USER" ssh-agent > /dev/null; then
