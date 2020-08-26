@@ -1,6 +1,5 @@
 set $mod Mod4
-set $ter /usr/bin/termite
-set $height 30
+set $ter /usr/bin/tilda
 set $default_gaps_inner 10
 set $default_gaps_outer 0
 set $wallpaper '$(find $HOME/.local/share/wallpapers/ -type f -iname "*.jpg" | shuf -n 1)'
@@ -32,8 +31,6 @@ client.urgent           $base08 $base08 $base00 $base08 $base08
 client.placeholder      $base00 $base00 $base05 $base00 $base00
 client.background       $base07
 
-font pango:FontAwesome, Inconsolata 12
-
 gaps inner $default_gaps_inner
 gaps outer $default_gaps_outer
 
@@ -44,28 +41,30 @@ focus_on_window_activation urgent
 floating_minimum_size -1 x -1
 floating_maximum_size -1 x -1
 
+set $ws1 "1:  "
+set $ws2 "2:  "
+set $ws3 "3:  "
+set $ws4 "4:  "
+set $ws5 "5:  "
+set $ws6 "6:  "
+set $ws7 "7:  "
+set $ws8 "8:  "
+set $ws9 "9:  "
+set $ws0 "10:  "
+
 # assign apps to workspaces
-assign [class="jetbrains-idea-ce|jetbrains-idea"] 0
-assign [app_id="subl3|code-oss"]                  1
-assign [class="Vmware"]                           2
-assign [class="DBeaver"]                          3
-assign [class="Clementine"]                       4
-assign [app_id="termite"]                         5
-assign [class="Chromium|Brave-browser|Firefox"]   6
-assign [class="slack|Slack"]                      7
-assign [class="Tixati"]                           8
-assign [class="Lens"]                             9
-
-
-for_window [window_role="pop-up"]          floating enable
-for_window [window_role="bubble"]          floating enable
-for_window [window_role="task_dialog"]     floating enable
-for_window [window_role="Preferences"]     floating enable
-for_window [window_type="dialog"]          floating enable
-for_window [window_type="menu"]            floating enable
-for_window [class="galculator|Galculator"] floating enable
-for_window [class="java-lang-Thread"]      floating enable
-for_window [app_id="guake"]                floating enable
+assign [class="jetbrains-idea-ce|jetbrains-idea"] $ws1
+assign [app_id="subl3|code-oss"]                  $ws2
+assign [class="Vmware"]                           $ws3
+assign [class="DBeaver"]                          $ws4
+assign [class="Clementine"]                       $ws5
+assign [app_id="termite"]                         $ws6
+assign [class="Chromium|firefox"]                 $ws7
+assign [class="Slack"]                            $ws8
+assign [class="Microsoft Teams - Preview"]        $ws8
+assign [class="Tixati"]                           $ws9
+assign [app_id="transmission-remote-gtk"]         $ws9
+assign [class="Lens"]                             $ws0
 
 for_window [class="^.*"] border pixel 1
 
@@ -121,33 +120,34 @@ bindsym $mod+space focus mode_toggle
 
 
 # switch to workspace
-bindsym $mod+1 workspace 0
-bindsym $mod+2 workspace 1
-bindsym $mod+3 workspace 2
-bindsym $mod+4 workspace 3
-bindsym $mod+5 workspace 4
-bindsym $mod+6 workspace 5
-bindsym $mod+7 workspace 6
-bindsym $mod+8 workspace 7
-bindsym $mod+9 workspace 8
-bindsym $mod+0 workspace 9
+bindsym $mod+1 workspace $ws1
+bindsym $mod+2 workspace $ws2
+bindsym $mod+3 workspace $ws3
+bindsym $mod+4 workspace $ws4
+bindsym $mod+5 workspace $ws5
+bindsym $mod+6 workspace $ws6
+bindsym $mod+7 workspace $ws7
+bindsym $mod+8 workspace $ws8
+bindsym $mod+9 workspace $ws9
+bindsym $mod+0 workspace $ws0
 
 # move focused container to workspace
-bindsym $mod+shift+1 move container to workspace 0
-bindsym $mod+shift+2 move container to workspace 1
-bindsym $mod+shift+3 move container to workspace 2
-bindsym $mod+shift+4 move container to workspace 3
-bindsym $mod+shift+5 move container to workspace 4
-bindsym $mod+shift+6 move container to workspace 5
-bindsym $mod+shift+7 move container to workspace 6
-bindsym $mod+shift+8 move container to workspace 7
-bindsym $mod+shift+9 move container to workspace 8
-bindsym $mod+shift+0 move container to workspace 9
+bindsym $mod+shift+1 move container to workspace $ws1
+bindsym $mod+shift+2 move container to workspace $ws2
+bindsym $mod+shift+3 move container to workspace $ws3
+bindsym $mod+shift+4 move container to workspace $ws4
+bindsym $mod+shift+5 move container to workspace $ws5
+bindsym $mod+shift+6 move container to workspace $ws6
+bindsym $mod+shift+7 move container to workspace $ws7
+bindsym $mod+shift+8 move container to workspace $ws8
+bindsym $mod+shift+9 move container to workspace $ws9
+bindsym $mod+shift+0 move container to workspace $ws0
 
 bindsym $mod+ctrl+h move workspace to output left
 bindsym $mod+ctrl+s move workspace to output right
 
-bindsym $mod+ctrl+t exec guake-toggle
+bindsym $mod+ctrl+t scratchpad show
+bindsym $mod+ctrl+n move scratchpad
 
 bindsym XF86MonBrightnessDown exec brightnessctl -d intel_backlight set 5%-
 bindsym XF86MonBrightnessUp exec brightnessctl -d intel_backlight set +5%
@@ -184,7 +184,20 @@ mode "$system" {
 }
 
 bar {
-    swaybar_command /usr/bin/waybar
+  strip_workspace_numbers yes
+  font pango:Font Awesome 5 Free 20, Inconsolata 12
+  position top
+  status_command /usr/bin/i3status-rs ~/.config/sway/status.toml
+
+  colors {
+    separator   #545862
+    background  #282c34
+    statusline  #282c34
+    focused_workspace   #61afef #61afef #282c34
+    active_workspace    #282c34 #282c34 #282c34
+    inactive_workspace  #282c34 #282c34 #545862
+    urgent_workspace    #282c34 #be5046 #282c34
+  }
 }
 
 

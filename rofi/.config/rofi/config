@@ -1,3 +1,6 @@
-    rofi.show-icons: true
-    rofi.separator-style: solid
-    rofi.theme: onedark.rasi
+configuration {
+	modi: "window,drun,run,ssh,combi";
+	show-icons: true;
+	combi-modi: "drun,run,ssh";
+	theme: "/usr/share/rofi/themes/Arc-Dark.rasi";
+}

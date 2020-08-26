@@ -1,0 +1,23 @@
+theme = "modern"
+icons = "awesome"
+
+[[block]]
+block = "music"
+player = "clementine"
+
+[[block]]
+block = "backlight"
+device = "intel_backlight"
+
+[[block]]
+block = "sound"
+on_click = "/usr/bin/pavucontrol"
+
+[[block]]
+block = "bluetooth"
+mac = "D0:C8:57:18:12:FA"
+
+[[block]]
+block = "time"
+interval = 60
+format = "%R"
