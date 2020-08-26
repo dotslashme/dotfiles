@@ -1,19 +1,16 @@
-### Antibody init
-source <(antibody init)
-antibody bundle < ~/.antibody-plugins
 
-## Hub alias
-eval "$(hub alias -s)"
-
-## Alias
+## ls
 alias ls='ls -lah --group-directories-first --color=always'
 
-alias lss='ls -rt'
-alias mvp='maven -T C1'
-alias ssh='TERM=xterm ssh'
+## bat
 alias bat='bat --theme TwoDark --style header,grid'
 
-## Git alias
+## maven
+alias -g mvp='mvn -T C1'
+alias mci='mvn clean install'
+alias mvpci='mvp clean install'
+
+## git
 alias ga='git add'
 alias gaa='git add --all'
 alias gau='git add --update'
@@ -41,10 +38,10 @@ alias gstl='git stash list'
 alias gstp='git stash pop'
 alias gsu='git submodule update'
 
-## Environment
+## environment
 export EDITOR="vim"
 export TERM="xterm-256color"
-export GOPATH="/home/cvelin/go"
+export GOPATH="${HOME}/go"
 
 ## ssh-agent
 if ! pgrep -u "$USER" ssh-agent > /dev/null; then
