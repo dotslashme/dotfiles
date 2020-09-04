@@ -1,3 +1,4 @@
+## zgen init
 source /usr/share/zsh/share/zgen.zsh
 if ! zgen saved; then
 	zgen load zsh-users/zsh-completions
@@ -6,7 +7,7 @@ if ! zgen saved; then
 	zgen load zsh-users/zsh-autosuggestions
 	zgen load chrissicool/zsh-256color
 	zgen load romkatv/powerlevel10k powerlevel10k
-	zgen load htgraf/zsh-sudo
+	zgen load hcgraf/zsh-sudo
 	zgen save
 fi
 
@@ -37,6 +38,10 @@ setopt HIST_IGNORE_SPACE
 
 bindkey -v
 bindkey "^R" history-incremental-pattern-search-backward
+
+## cd
+setopt NO_CASE_GLOB
+setopt AUTO_CD
 
 ## Completion
 setopt ALWAYS_TO_END
