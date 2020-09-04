@@ -1,0 +1,87 @@
+#!/usr/bin/env bash
+
+# !!! This script will almost certainly destroy a working environment, do not
+# use it without understanding what it does !!!
+#
+# Setup script for a newly installed environment, to quickly get it up and
+# running.
+#
+
+
+readonly script=$(readlink -f "$0")
+readonly script_path=$(dirname "${script}")
+
+readonly target_root_path="/"
+readonly target_home_path="${HOME}"
+readonly source_root_path="${script_path}/root"
+readonly source_home_path="${script_path}/home"
+
+targets=()
+
+# Function that will prepare for symlinking, by ensuring that the link path
+# exists and that an already existing symlink or file does not already exist.
+# $1 - absolute path and name of the symlink
+prepare_link() {
+  local link="$1"
+  local link_path
+  link_path=$(dirname "${link}")
+
+  if [[ -L "${link}" ]]; then
+    printf "Symlink %s found - removing\\n" "${link}"
+    unlink "${link}"
+  elif [[ -e "${link}" ]]; then
+    printf "File %s found - removing\\n" "${link}"
+    rm -f "${link}"
+  fi
+
+  printf "Creating %s if it does not already exist\\n" "${link_path}"
+  mkdir -p "${link_path}"
+}
+
+
+# Function that will install symlinks in the real file system tree under
+# $HOME or / to point to the corresponding path under $source_root_path
+# or $source_home_path of the git repository.
+# $1 - The target file that the symlink should point to
+symlink() {
+  local target="$1"
+  local link=""
+
+  if [[ "${target}" =~ "/root" ]]; then
+    link="${target_root_path}${target/${source_root_path}\//}"
+  else
+    link="${target_home_path}/${target/${source_home_path}\//}"
+  fi
+
+  prepare_link "${link}"
+
+  printf "Symlinking %s to %s\\n" "${link}" "${target}"
+  ln -s "${target}" "${link}"
+}
+
+
+# Function that will find all files recursively from a starting folder
+# $1 - Absolute path to starting folder to search
+find_targets() {
+  local path="$1"
+
+  while IFS= read -d $'\0' -r file ; do
+    targets=("${targets[@]}" "${file}")
+  done < <(find "${path}" -type f -print0)
+}
+
+# Main function that will execute the script
+main() {
+  # Find all files recursively that belong under home folder
+  find_targets "${source_home_path}"
+
+  # Find all files recursively that belong under / folder
+  find_targets "${source_root_path}"
+
+  # Now symlink all of them
+  for f in "${targets[@]}"; do
+    symlink "${f}"
+  done  
+}
+
+main

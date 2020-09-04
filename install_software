@@ -9,10 +9,8 @@ fi
 
 pacman -Syu --needed --noconfirm \
 	base-devel \
-	bbswitch \
 	blueman \
 	bluez \
-	bumblebee \
 	docker \
 	docker-compose \
 	git \
@@ -23,6 +21,7 @@ pacman -Syu --needed --noconfirm \
 	mako \
 	maven \
 	openssh \
+	otf-font-awesome \
 	pavucontrol \
 	pulseaudio \
 	pulseaudio-bluetooth \
@@ -36,14 +35,10 @@ pacman -Syu --needed --noconfirm \
 	swayidle \
 	swaylock \
 	task \
-	termite \
-	ttf-font-awesome \
+	tilda \
 	ttf-inconsolata \
 	vim \
-	waybar \
 	xorg-server-xwayland \
 	zsh
-
-curl -sfL git.io/antibody | sh -s - -b /usr/local/bin
 
 pip install taskw

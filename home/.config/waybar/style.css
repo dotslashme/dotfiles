@@ -2,43 +2,41 @@
     border: none;
     border-radius: 0;
     min-height: 0;
+    font-family: monospace;
 }
 
 window#waybar {
-    color: #abb2bf;
+    color: #d2c5bc;
     background: rgba(40,44,52,0.8);
 }
 
 #workspaces button {
-    font-size: 18px;
+    font-size: 20px;
     padding: 0 8px;
-    color: #abb2bf;
+    color: #d2c5bc;
     border-bottom: 2px solid transparent;
 }
 
 #workspaces button.focused {
-    color: #e5c07b;
-    border-bottom: 2px solid #e5c07b;
+    color: #f9bb80;
+    border-bottom: 2px solid #f9bb80;
 }
 
 #workspaces button.urgent {
-    color: #e06c75;
-    border-bottom: 2px solid #e06c75;
+    color: #b91e2e;
+    border-bottom: 2px solid #b91e2e;
 }
 
-#clock, #battery, #pulseaudio, #tray, #mode {
-    font-size: 13px;
-    padding: 0 3px;
-    margin: 0 2px;
-}
-
-#battery icon {
-    color: #e06c75;
+#clock, #battery, #pulseaudio, #tray, #backlight, #custom-vpn, #mode {
+    font-family: Inconsolata; 
+    font-size: 16px;
+    padding: 0 2px;
+    margin: 0 3px;
 }
 
 @keyframes blink {
     to {
-        background-color: #abb2bf;
+        background-color: #d2c5bc;
         color: #282c34;
     }
 }
@@ -52,5 +50,5 @@ window#waybar {
 }
 
 #network.disconnected {
-    background: #e06c75;
+    background: #b91e2e;
 }

@@ -1,7 +1,3 @@
-### Antibody init
-source <(antibody init)
-antibody bundle < ~/.antibody-plugins
-
 ## Hub alias
 eval "$(hub alias -s)"
 
@@ -44,7 +40,7 @@ alias gsu='git submodule update'
 ## Environment
 export EDITOR="vim"
 export TERM="xterm-256color"
-export GOPATH="/home/cvelin/go"
+export GOPATH="${HOME}/go"
 
 ## ssh-agent
 if ! pgrep -u "$USER" ssh-agent > /dev/null; then

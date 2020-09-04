@@ -1,6 +1,6 @@
 # dotfiles
 
-## Install environment (Arch linux)
+## Install dependencies (Arch linux)
 
 ```sh
 # sh < <(curl -s https://raw.githubusercontent.com/dotslashme/dotfiles/master/install_software)
@@ -10,20 +10,8 @@ OR
 # wget -O - https://raw.githubusercontent.com/dotslashme/dotfiles/master/install_software | sh
 ```
 
-## Dependencies
-
-There are loads of dependencies for this project, but the only one needed to actually run it is `stow`. Beyond that, the use of dependencies vary depending on which folders you install using `stow`.
-
-## Full install
-
-To setup your home folder, run:
+## Setup
 
 ```sh
-stow -t "${HOME}" antibody rofi sway termite vim wallpapers zsh waybar
-```
-
-To setup the root folder, run:
-
-```sh
-sudo stow -t / keyboard
+./symlink
 ```

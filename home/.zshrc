@@ -1,3 +1,15 @@
+source /usr/share/zsh/share/zgen.zsh
+if ! zgen saved; then
+	zgen load zsh-users/zsh-completions
+	zgen load zsh-users/zsh-syntax-highlighting
+	zgen load zsh-users/zsh-history-substring-search
+	zgen load zsh-users/zsh-autosuggestions
+	zgen load chrissicool/zsh-256color
+	zgen load romkatv/powerlevel10k powerlevel10k
+	zgen load htgraf/zsh-sudo
+	zgen save
+fi
+
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
