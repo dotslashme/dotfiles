@@ -10,41 +10,42 @@ set $default_gaps_outer 0
 set $wallpaper '$(find $HOME/.local/share/wallpapers/ -type f -iname "*.jpg" | shuf -n 1)'
 
 # special
-set $fg #d2c5bc
-set $bg #101010
-set $cur #d2c5bc
+set $fg #D8DEE9
+set $bg #2E3440
+set $cur #D8DEE9
+
 
 # black
-set $base00 #202020
-set $base08 #606060
+set $base00 #2E3440
+set $base08 #4C566A
 
 # red
-set $base01 #b91e2e
-set $base09 #d14548
+set $base01 #BF616A
+set $base09 #BF616A
 
 # green
-set $base02 #81957c
-set $base0A #a7b79a
+set $base02 #A3BE8C
+set $base0A #A3BE8C
 
 # yellow
-set $base03 #f9bb80
-set $base0B #fae3a0
+set $base03 #EBCB8B
+set $base0B #EBCB8B
 
 # blue
-set $base04 #356579
-set $base0C #7491a1
+set $base04 #81A1C1
+set $base0C #81A1C1
 
 # magenta
-set $base05 #2d2031
-set $base0D #87314e
+set $base05 #B48EAD
+set $base0D #B48EAD
 
 # cyan
-set $base06 #0b3452
-set $base0E #0f829d
+set $base06 #88C0D0
+set $base0E #8FBCBB
 
 # white
-set $base07 #909090
-set $base0F #fff0f0
+set $base07 #E5E9F0
+set $base0F #ECEFF4
 
 
 
@@ -265,7 +266,7 @@ bar {
   swaybar_command /usr/bin/waybar
 }
 
-exec mako --background-color #101010aa --text-color #d2c5bcff
+exec mako --background-color #2E3440aa --text-color #81A1C1
 
 exec swayidle -w \
   timeout 300 'swaylock-fancy -e --daemonize' \

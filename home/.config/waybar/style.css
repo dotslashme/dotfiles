@@ -6,7 +6,7 @@
 }
 
 window#waybar {
-    color: #d2c5bc;
+    color: #D8DEE9;
     background: rgba(40,44,52,0.8);
 }
 
@@ -18,13 +18,13 @@ window#waybar {
 }
 
 #workspaces button.focused {
-    color: #f9bb80;
-    border-bottom: 2px solid #f9bb80;
+    color: #81A1C1;
+    border-bottom: 2px solid #81A1C1;
 }
 
 #workspaces button.urgent {
-    color: #b91e2e;
-    border-bottom: 2px solid #b91e2e;
+    color: #BF616A;
+    border-bottom: 2px solid #BF616A;
 }
 
 #clock, #battery, #pulseaudio, #tray, #backlight, #custom-vpn, #mode {
@@ -36,8 +36,8 @@ window#waybar {
 
 @keyframes blink {
     to {
-        background-color: #d2c5bc;
-        color: #282c34;
+        background-color: #D8DEE9;
+        color: #2E3440;
     }
 }
 
@@ -50,5 +50,5 @@ window#waybar {
 }
 
 #network.disconnected {
-    background: #b91e2e;
+    background: #BF616A;
 }
