@@ -27,7 +27,7 @@ window#waybar {
     border-bottom: 2px solid #BF616A;
 }
 
-#clock, #battery, #pulseaudio, #tray, #backlight, #custom-vpn, #mode {
+#clock, #battery, #pulseaudio, #tray, #backlight, #custom-vpn, #custom-github, #mode {
     font-family: Inconsolata; 
     font-size: 16px;
     padding: 0 2px;

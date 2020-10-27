@@ -59,6 +59,12 @@ set $base0F #ECEFF4
 
 output eDP-1 scale 2
 output eDP-1 pos 0 0 res 3840x2160
+output DP-2 scale 1
+output DP-2 pos 1920 0 res 1920x1080
+output DP-2 subpixel rgb
+output DP-1 scale 1
+output DP-1 pos 1920 0 res 1920x1080
+output DP-1 subpixel rgb
 output HDMI-A-1 scale 1
 output HDMI-A-1 pos 1920 0 res 1920x1080
 output HDMI-A-1 subpixel rgb
@@ -113,6 +119,7 @@ for_window [class="^.*"] border pixel 1
 # assign apps to workspaces
 assign [class="jetbrains-idea-ce|jetbrains-idea"] 0
 assign [app_id="subl3"]                           1
+assign [class="code-oss"]                         1
 assign [class="Vmware"]                           2
 assign [class="DBeaver"]                          3
 assign [class="Clementine"]                       4

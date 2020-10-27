@@ -1,0 +1,9 @@
+#!/usr/bin/env sh
+
+readonly token="$(cat ${HOME}/.config/waybar/scripts/notifications.token)"
+readonly username="dotslashme"
+readonly count=$(curl -u "${username}":"${token}" https://api.github.com/notifications | jq '. | length')
+
+if [ "${count}" != "0" ]; then
+	printf '{"text":"%s","tooltip":"%s","class":"%s"}' "$count" "$tooltip" "$class"
+fi

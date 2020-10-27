@@ -4,7 +4,7 @@
     "height": 30,
     "modules-left": ["sway/mode","sway/window"],
     "modules-center": ["sway/workspaces"],
-    "modules-right": ["custom/vpn","backlight","pulseaudio","battery","clock","tray"],
+    "modules-right": ["custom/github","custom/vpn","backlight","pulseaudio","battery","clock","tray"],
     "sway/workspaces": {
         "persistent_workspaces": {
             "0": [],
@@ -71,6 +71,13 @@
         "exec-if": "test -d /proc/sys/net/ipv4/conf/azirevpn-se1",
         "return-type": "json",
         "interval": 5
+    },
+    "custom/github": {
+        "format": "{} ",
+        "return-type": "json",
+        "interval": 60,
+        "exec": "$HOME/.config/waybar/scripts/github_notifications",
+        "on-click": "xdg-open https://github.com/notifications"
     },
     "backlight": {
         "device": "intel_backlight",
